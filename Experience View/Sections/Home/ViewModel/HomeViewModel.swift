@@ -67,7 +67,6 @@ class HomeViewModel {
     }
     
     public func getUserName( completion : @escaping (String?) -> Void){
-        var result = ""
         if let idUser = auth.currentUser?.uid {
             // Obter uma referência à coleção "usuarios"
             let usuariosRef = Firestore.firestore().collection("usuarios")
@@ -82,7 +81,6 @@ class HomeViewModel {
                     
                     // Acessar as chaves "nome" e "email" do dicionário
                     if let nome = data?["nome"] as? String {
-                        result = nome
                         completion(nome)
                     }
                 } else {

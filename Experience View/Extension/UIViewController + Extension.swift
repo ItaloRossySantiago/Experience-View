@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-extension UIViewController {
+extension UIViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate  {
     func hideKeyBoardWhenTappedAround() {
         let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         tap.cancelsTouchesInView = false
@@ -35,5 +35,18 @@ extension UIViewController {
         }
         
     }
-    
+    public func selectImage() {
+        let imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
+        imagePicker.sourceType = .photoLibrary
+        self.present(imagePicker, animated: true)
+    }
+
+    public func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        let imagePicker = UIImagePickerController()
+        let imageSelected = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
+        self.loadImageSelect(imageSelected)
+        imagePicker.dismiss(animated: true)
+    }
 }
+

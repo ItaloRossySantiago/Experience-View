@@ -10,10 +10,8 @@ import FirebaseStorage
 import FirebaseFirestore
 import FirebaseAuth
 
-class PostViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    
+class PostViewController: UIViewController {
     var onPostSucess:(() -> Void)?
-    var imagePicker = UIImagePickerController()
     let  postView = PostView()
     var storage: Storage!
     var auth: Auth!
@@ -88,18 +86,7 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         }
     }
     
-    private func selectImage() {
-       
-        imagePicker.delegate = self
-        imagePicker.sourceType = .photoLibrary
-        self.present(imagePicker, animated: true)
-    }
-
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        let imageSelected = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
-        postView.loadImageSelect(imageSelected)
-        imagePicker.dismiss(animated: true)
-    }
+   
 
 }
 

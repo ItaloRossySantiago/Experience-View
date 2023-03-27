@@ -137,61 +137,19 @@
 			isa = PBXGroup;
 			children = (
 				2F3AD1FE29BFF50D008D9A27 /* Coordinator.swift */,
-				2F3AD20029BFF531008D9A27 /* LoginCoordinator.swift */,
-				2F3AD22729C00CC6008D9A27 /* RegisterCoordinator.swift */,
-				2F3B866029C28ABC002B384D /* HomeCoordinator.swift */,
-				2F3B866E29C2B12F002B384D /* PostCoordinator.swift */,
 			);
 			path = Coordinator;
-			sourceTree = "<group>";
-		};
-		2F3AD20229BFF76C008D9A27 /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				2F3B867029C2B16D002B384D /* Post */,
-				2F3B866229C28FC3002B384D /* Users */,
-				2F3B865D29C28888002B384D /* Home */,
-				2F3AD22229C00B60008D9A27 /* Register */,
-				2F3AD20329BFF775008D9A27 /* Login */,
-			);
-			path = ViewController;
-			sourceTree = "<group>";
-		};
-		2F3AD20329BFF775008D9A27 /* Login */ = {
-			isa = PBXGroup;
-			children = (
-				2F3AD20429BFF791008D9A27 /* LoginViewController.swift */,
-				2F3AD20629BFF7C8008D9A27 /* LoginView.swift */,
-			);
-			path = Login;
-			sourceTree = "<group>";
-		};
-		2F3AD20829BFF873008D9A27 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				2F3AD20929BFF894008D9A27 /* UserViewModel.swift */,
-				2F3B866C29C2A952002B384D /* HomeViewModel.swift */,
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		2F3AD20D29BFF997008D9A27 /* Api */ = {
 			isa = PBXGroup;
 			children = (
+				2FB2E83429D2598E001A454E /* ViewModel */,
 				2F3AD21129BFF9DA008D9A27 /* Provider */,
 				2F3AD21029BFF9CC008D9A27 /* Manager */,
 				2F3AD20F29BFF9BA008D9A27 /* Business */,
-				2F3AD20E29BFF9B1008D9A27 /* Model */,
 			);
 			path = Api;
-			sourceTree = "<group>";
-		};
-		2F3AD20E29BFF9B1008D9A27 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				2F3AD21229BFF9EB008D9A27 /* UserModel.swift */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		2F3AD20F29BFF9BA008D9A27 /* Business */ = {
@@ -236,39 +194,12 @@
 			path = Infraestructure;
 			sourceTree = "<group>";
 		};
-		2F3AD22229C00B60008D9A27 /* Register */ = {
-			isa = PBXGroup;
-			children = (
-				2F3AD22329C00B91008D9A27 /* RegisterViewController.swift */,
-				2F3AD22529C00BC2008D9A27 /* RegisterView.swift */,
-			);
-			path = Register;
-			sourceTree = "<group>";
-		};
 		2F3B865A29C28615002B384D /* TabBarController */ = {
 			isa = PBXGroup;
 			children = (
 				2F3B865B29C28835002B384D /* TabBarViewController.swift */,
 			);
 			path = TabBarController;
-			sourceTree = "<group>";
-		};
-		2F3B865D29C28888002B384D /* Home */ = {
-			isa = PBXGroup;
-			children = (
-				2FB4138029C77A30000ED982 /* PostCard */,
-				2F3B865E29C288C4002B384D /* HomeViewController.swift */,
-				2F3B866529C29228002B384D /* HomeView.swift */,
-			);
-			path = Home;
-			sourceTree = "<group>";
-		};
-		2F3B866229C28FC3002B384D /* Users */ = {
-			isa = PBXGroup;
-			children = (
-				2F3B866329C28FD2002B384D /* UsersViewController.swift */,
-			);
-			path = Users;
 			sourceTree = "<group>";
 		};
 		2F3B866729C299BF002B384D /* Design */ = {
@@ -287,13 +218,180 @@
 			name = Fonts;
 			sourceTree = "<group>";
 		};
-		2F3B867029C2B16D002B384D /* Post */ = {
+		2FB2E82229D255E4001A454E /* Sections */ = {
+			isa = PBXGroup;
+			children = (
+				2FB2E83129D2590B001A454E /* Users */,
+				2FB2E82E29D258C9001A454E /* Post */,
+				2FB2E82B29D25854001A454E /* Register */,
+				2FB2E82829D256D0001A454E /* Login */,
+				2FB4138029C77A30000ED982 /* PostCard */,
+				2FB2E82329D255EA001A454E /* Home */,
+			);
+			path = Sections;
+			sourceTree = "<group>";
+		};
+		2FB2E82329D255EA001A454E /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				2F3B865A29C28615002B384D /* TabBarController */,
+				2FB2E82729D25608001A454E /* Coordinator */,
+				2FB2E82629D25600001A454E /* Model */,
+				2FB2E82529D255F9001A454E /* ViewModel */,
+				2FB2E82429D255EF001A454E /* ViewController */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		2FB2E82429D255EF001A454E /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2F3B865E29C288C4002B384D /* HomeViewController.swift */,
+				2F3B866529C29228002B384D /* HomeView.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		2FB2E82529D255F9001A454E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2F3B866C29C2A952002B384D /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2FB2E82629D25600001A454E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2FB2E82729D25608001A454E /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				2F3B866029C28ABC002B384D /* HomeCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		2FB2E82829D256D0001A454E /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				2FB2E83529D2599C001A454E /* Model */,
+				2FB2E83229D25940001A454E /* ViewModel */,
+				2FB2E82A29D256EA001A454E /* Coordinator */,
+				2FB2E82929D256DA001A454E /* ViewController */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		2FB2E82929D256DA001A454E /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2F3AD20429BFF791008D9A27 /* LoginViewController.swift */,
+				2F3AD20629BFF7C8008D9A27 /* LoginView.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		2FB2E82A29D256EA001A454E /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				2F3AD20029BFF531008D9A27 /* LoginCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		2FB2E82B29D25854001A454E /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				2FB2E82D29D258A4001A454E /* ViewController */,
+				2FB2E82C29D2585B001A454E /* Coordinator */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		2FB2E82C29D2585B001A454E /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				2F3AD22729C00CC6008D9A27 /* RegisterCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		2FB2E82D29D258A4001A454E /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2F3AD22329C00B91008D9A27 /* RegisterViewController.swift */,
+				2F3AD22529C00BC2008D9A27 /* RegisterView.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		2FB2E82E29D258C9001A454E /* Post */ = {
+			isa = PBXGroup;
+			children = (
+				2FB2E83029D258E0001A454E /* ViewController */,
+				2FB2E82F29D258D1001A454E /* Coordinator */,
+			);
+			path = Post;
+			sourceTree = "<group>";
+		};
+		2FB2E82F29D258D1001A454E /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				2F3B866E29C2B12F002B384D /* PostCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		2FB2E83029D258E0001A454E /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
 				2F3B867129C2B18C002B384D /* PostViewController.swift */,
 				2F3B867329C2B1C2002B384D /* PostView.swift */,
 			);
-			path = Post;
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		2FB2E83129D2590B001A454E /* Users */ = {
+			isa = PBXGroup;
+			children = (
+				2FB2E83329D25954001A454E /* ViewController */,
+			);
+			path = Users;
+			sourceTree = "<group>";
+		};
+		2FB2E83229D25940001A454E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2F3AD20929BFF894008D9A27 /* UserViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2FB2E83329D25954001A454E /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2F3B866329C28FD2002B384D /* UsersViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		2FB2E83429D2598E001A454E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2FB2E83529D2599C001A454E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2F3AD21229BFF9EB008D9A27 /* UserModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		2FB4138029C77A30000ED982 /* PostCard */ = {
@@ -330,13 +428,11 @@
 		2FBB2C0029BFE88F0070D3E4 /* Experience View */ = {
 			isa = PBXGroup;
 			children = (
+				2FB2E82229D255E4001A454E /* Sections */,
 				2F3B866729C299BF002B384D /* Design */,
-				2F3B865A29C28615002B384D /* TabBarController */,
 				2F3AD21D29BFFB65008D9A27 /* Infraestructure */,
 				2F3AD21829BFFAC1008D9A27 /* Extension */,
 				2F3AD20D29BFF997008D9A27 /* Api */,
-				2F3AD20829BFF873008D9A27 /* ViewModel */,
-				2F3AD20229BFF76C008D9A27 /* ViewController */,
 				2F3AD1FD29BFF4F0008D9A27 /* Coordinator */,
 				2FBB2C0129BFE88F0070D3E4 /* AppDelegate.swift */,
 				2FBB2C0329BFE88F0070D3E4 /* SceneDelegate.swift */,

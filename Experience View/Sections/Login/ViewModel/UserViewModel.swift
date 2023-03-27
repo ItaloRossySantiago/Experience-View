@@ -16,19 +16,15 @@ enum ErrorFields: Error {
 
 class UserViewModel {
     private let model: UserModel
-    private let auth: Auth!
-    private let firestore: Firestore!
+    private let auth: Auth
+    private let firestore: Firestore
+    private let manager: UserManager
     
     init(model: UserModel) {
         self.model = model
         auth = Auth.auth()
         firestore = Firestore.firestore()
-    }
-    
-    init() {
-        self.model = UserModel()
-        auth = Auth.auth()
-        firestore = Firestore.firestore()
+        manager = UserManager(business: UserBusiness())
     }
     
     var email : String {
@@ -36,10 +32,9 @@ class UserViewModel {
     }
     
     
-    func getUSerFromApi (_ email :String,_ password: String, completion: @escaping (Result<UserViewModel, Error>) -> Void) {
-        let manager = UserManager(business: UserBusiness())
+    func getUSerFromApi (_ email :String,_ password: String, completion: @escaping (Result<UserModel, Error>) -> Void) {
         manager.login(email: email, password: password) { userModel in
-            completion(.success(UserViewModel(model: userModel)))
+            completion(.success(userModel))
         } failureHandler: { error in
             completion(.failure(error))
             

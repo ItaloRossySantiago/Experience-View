@@ -41,7 +41,8 @@ class RegisterViewController: UIViewController {
     
     
     private func onSignupTap(_ name:String, _ email:String, _ senha:String){
-        let userViewModel = UserViewModel()
+        let model = UserModel(email: email,password: senha)
+        let userViewModel = UserViewModel(model: model)
         DispatchQueue.main.async {
             userViewModel.registerNewUser(name, email, senha) { data in
                 if let result:String = data["result"] as? String,
@@ -60,9 +61,6 @@ class RegisterViewController: UIViewController {
             
         }
       
-        
-            
-        
     }
     
     private func onSignupFailed(_ title:String, _ message:String){

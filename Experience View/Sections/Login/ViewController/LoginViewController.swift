@@ -43,8 +43,8 @@ class LoginViewController: UIViewController {
     }
     
     private func openTap(_ email:String, _ password:String){
-        
-        let userViewModel = UserViewModel()
+        let model = UserModel(email: email, password: password)
+        let userViewModel = UserViewModel(model: model)
         
         userViewModel.getUSerFromApi(email, password) {[weak self] result in
             switch result {

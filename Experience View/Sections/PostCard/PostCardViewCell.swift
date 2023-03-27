@@ -71,7 +71,7 @@ class PostCollectionViewCellScreen: UIView {
         label.font = UIFont.systemFont(ofSize: 14, weight: .semibold)
         return label
     }()
-
+    
     @objc func tappedLikeImageView() {
         
     }
@@ -89,9 +89,18 @@ class PostCollectionViewCellScreen: UIView {
         return img
         
     }()
-
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
+        setupView()
+        configConstraints()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    private func setupView () {
         addSubview(cardView)
         cardView.addSubview(likeImageView)
         cardView.addSubview(profileImageView)
@@ -99,12 +108,6 @@ class PostCollectionViewCellScreen: UIView {
         cardView.addSubview(postImageView)
         cardView.addSubview(heartImageView)
         cardView.addSubview(descriptionLabel)
-        
-        configConstraints()
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
     
     private func configConstraints() {
